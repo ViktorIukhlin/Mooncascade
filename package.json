@@ -1,0 +1,29 @@
+{
+    "name": "mooncascade",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "server-install": "cd server && npm i",
+        "client-install": "cd client && npm i",
+        "test_client-install": "cd test-client && npm i",
+        "server": "cd server && npm start",
+        "client": "cd client && npm start",
+        "test_client": "cd test-client && npm start",
+        "install": "concurrently \"npm run server-install\" \"npm run client-install\" \"npm run test_client-install\"",
+        "start": "concurrently \"npm run server\" \"npm run client\" \"npm run test_client\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ViktorIukhlin/Mooncascade.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ViktorIukhlin/Mooncascade/issues"
+    },
+    "homepage": "https://github.com/ViktorIukhlin/Mooncascade#readme",
+    "devDependencies": {
+        "concurrently": "^6.2.0"
+    }
+}

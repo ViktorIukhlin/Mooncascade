@@ -9,8 +9,16 @@
 </head>
 
 <body>
+    <form submit="">
+        <input type="text" name="startMin" value="3000">
+        <input type="text" name="startMax" value="15000">
+        <input type="text" name="finishMin" value="5000">
+        <input type="text" name="finishMin" value="10000">
+        <input type="submit">
+    </form>
     <script>
         const socket = new WebSocket("ws://localhost:5000");
+        const button = document.querySelector('input');
 
         function getRandomNumber(min, max) {
             return Math.floor(min - 0.5 + Math.random() * (max - min + 1));
@@ -18,19 +26,19 @@
 
         socket.onopen = function () {
             for (let i = 1; i < 21; i++) {
+
                 let firstPoint = getRandomNumber(3000, 15000)
-                console.log('firstPoint', firstPoint)
+
                 setTimeout(() => {
-                    console.log('firstPoint PUSH')
                     socket.send(JSON.stringify({
                         identifier: i,
                         timing_point: 'Start',
                         time: firstPoint,
                         event: 'message'
                     }))
+
                     let secondPoint = getRandomNumber(5000, 10000)
                     setTimeout(() => {
-                        console.log('secondPoint PUSH')
                         socket.send(JSON.stringify({
                             identifier: i,
                             timing_point: 'Finish',
@@ -38,6 +46,7 @@
                             event: 'message'
                         }))
                     }, secondPoint)
+
                 }, firstPoint)
             }
         };
