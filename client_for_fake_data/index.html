@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Data</title>
+</head>
+
+<body>
+    <script>
+        const socket = new WebSocket("ws://localhost:5000");
+
+        function getRandomNumber(min, max) {
+            return Math.floor(min - 0.5 + Math.random() * (max - min + 1));
+        }
+
+        socket.onopen = function () {
+            for (let i = 1; i < 21; i++) {
+                let firstPoint = getRandomNumber(3000, 15000)
+                console.log('firstPoint', firstPoint)
+                setTimeout(() => {
+                    console.log('firstPoint PUSH')
+                    socket.send(JSON.stringify({
+                        identifier: i,
+                        timing_point: 'Start',
+                        time: firstPoint,
+                        event: 'message'
+                    }))
+                    let secondPoint = getRandomNumber(5000, 10000)
+                    setTimeout(() => {
+                        console.log('secondPoint PUSH')
+                        socket.send(JSON.stringify({
+                            identifier: i,
+                            timing_point: 'Finish',
+                            time: secondPoint,
+                            event: 'message'
+                        }))
+                    }, secondPoint)
+                }, firstPoint)
+            }
+        };
+    </script>
+</body>
+
+</html>
