@@ -177,7 +177,7 @@ const MainPage = () => {
                 <div className="modal__input-box">
                     {!sending ? (
                         <div className="modal__button" onClick={sendingData}>
-                            SEND FAKE DATA
+                            SEND DUMMY DATA
                         </div>
                     ) : (
                         <div
