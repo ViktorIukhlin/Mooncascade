@@ -1,0 +1,97 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #1f2041;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    padding: 0 30px;
+    width: 380px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    &__label {
+        margin-bottom: 8px;
+    }
+    &__input-box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    &__input {
+        display: block;
+        box-sizing: border-box;
+        width: 60px;
+        height: 44px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 4px;
+        transition: 0.1s;
+        padding-left: 10px;
+        -moz-appearance: textfield;
+        &:focus {
+            border: 1px solid rgba(31, 32, 65, 0.5);
+            -webkit-appearance: none;
+            outline: none;
+        }
+        &::placeholder {
+            color: rgba(31, 32, 65, 0.25);
+        }
+        &:first-child {
+        }
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+    &__button {
+        width: 100%;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        border-radius: 22px;
+        color: #fff;
+        cursor: pointer;
+        user-select: none;
+        &:hover {
+            background: linear-gradient(180deg, #b492ff 0%, #7c9afc 100%);
+        }
+        &:active {
+            background: linear-gradient(180deg, #ad87ff 0%, #7192ff 100%);
+        }
+        &.disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    }
+}
+
+.spinner {
+    margin-left: 8px;
+    &::after {
+        display: block;
+        content: "";
+        border: 4px solid #b8c1cc;
+        border-bottom: 4px solid transparent;
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+        animation: spin 1s linear infinite;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
