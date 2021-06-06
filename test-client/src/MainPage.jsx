@@ -89,7 +89,7 @@ const MainPage = () => {
                         identifier: i,
                         timing_point: "Start",
                         time: firstPoint,
-                        event: "message",
+                        event: "data",
                     })
                 );
 
@@ -103,7 +103,7 @@ const MainPage = () => {
                             identifier: i,
                             timing_point: "Finish",
                             time: secondPoint,
-                            event: "message",
+                            event: "data",
                         })
                     );
                     setSending((state) => state - 1);

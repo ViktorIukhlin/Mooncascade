@@ -19,7 +19,7 @@ wss.on('connection', function connection(ws) {
     ws.on('message', function (message) {
         message = JSON.parse(message)
         switch (message.event) {
-            case 'message':
+            case 'data':
                 broadcastMessage(message)
                 break
             case 'connection':
