@@ -10,6 +10,7 @@ const wss = new ws.Server(
 wss.on('connection', function connection(ws) {
     ws.on('message', function (data) {
         data = JSON.parse(data)
+
         switch (data.event) {
             case 'data':
                 broadcastMessage(data)
@@ -21,7 +22,7 @@ wss.on('connection', function connection(ws) {
     })
 })
 
-function broadcastMessage(data, id) {
+function broadcastMessage(data) {
     wss.clients.forEach(client => {
         client.send(JSON.stringify(data))
     })

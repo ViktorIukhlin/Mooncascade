@@ -6,8 +6,8 @@ const Table = ({ data }) => {
         const athlete = listOfAthletes.find(item => item.id === Id)
         return (
             <>
-                <td>{athlete.first_name}</td>
-                <td>{athlete.surname}</td>
+                <td>{athlete?.first_name}</td>
+                <td>{athlete?.surname}</td>
             </>
         )
     }
@@ -32,10 +32,8 @@ const Table = ({ data }) => {
                     <tr key={Id}>
                         <td>{athlete.identifier}</td>
                         {getNameOfAthlete(athlete.identifier)}
-                        <td>{getSeconds(athlete.start_time)} sec.</td>
-                        <td>
-                            {athlete.finish_time ? getSeconds(athlete.start_time + athlete.finish_time) + ' sec.' : <span>&mdash;</span>}
-                        </td>
+                        <td>{athlete.start_time ? getSeconds(athlete.start_time) + ' sec.' : <span>&mdash;</span>}</td>
+                        <td>{athlete.finish_time ? getSeconds(athlete.finish_time) + ' sec.' : <span>&mdash;</span>}</td>
                     </tr>
                 ))}
             </tbody>

@@ -11,6 +11,7 @@ const MainPage = () => {
 
         socket.current.onopen = () => {
             setConnected(true)
+            console.log('Socket start')
         }
 
         socket.current.onmessage = event => {
@@ -18,17 +19,22 @@ const MainPage = () => {
 
             if (athlete.timing_point === 'Finish') {
                 setData(state => {
-                    let newArr = state.map(item => {
-                        if (item.identifier === athlete.identifier) {
-                            return { ...item, finish_time: athlete.time }
-                        } else {
-                            return item
-                        }
-                    })
+                    let newArr = []
+                    if (state.some(i => i.identifier === athlete.identifier)) {
+                        newArr = state.map(item => {
+                            if (item.identifier === athlete.identifier) {
+                                return { ...item, finish_time: athlete.time }
+                            } else {
+                                return item
+                            }
+                        })
+                    } else {
+                        newArr = [...state, { identifier: athlete.identifier, start_time: 0, finish_time: athlete.time }]
+                    }
 
                     return newArr.sort((a, b) => {
-                        a = a.finish_time ? a.finish_time + a.start_time + 100000 : a.start_time
-                        b = b.finish_time ? b.finish_time + b.start_time + 100000 : b.start_time
+                        a = a.finish_time ? a.finish_time + 100000 : a.start_time
+                        b = b.finish_time ? b.finish_time + 100000 : b.start_time
                         return b - a
                     })
                 })
@@ -37,8 +43,8 @@ const MainPage = () => {
                     let newArr = [{ identifier: athlete.identifier, start_time: athlete.time, finish_time: 0 }, ...state]
 
                     return newArr.sort((a, b) => {
-                        a = a.finish_time ? a.finish_time + a.start_time + 100000 : a.start_time
-                        b = b.finish_time ? b.finish_time + b.start_time + 100000 : b.start_time
+                        a = a.finish_time ? a.finish_time + 100000 : a.start_time
+                        b = b.finish_time ? b.finish_time + 100000 : b.start_time
                         return b - a
                     })
                 })
@@ -59,9 +65,9 @@ const MainPage = () => {
     useEffect(() => {
         const listener = () => {
             if (document.visibilityState === 'visible') {
-                console.log('ПРИШЕЛ НА САЙТ')
+                connect()
             } else {
-                console.log('УШЕЛ С САЙТА')
+                socket.current.close()
             }
         }
 

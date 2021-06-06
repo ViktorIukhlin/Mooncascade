@@ -102,7 +102,7 @@ const MainPage = () => {
                         JSON.stringify({
                             identifier: i,
                             timing_point: "Finish",
-                            time: secondPoint,
+                            time: secondPoint + firstPoint,
                             event: "data",
                         })
                     );
