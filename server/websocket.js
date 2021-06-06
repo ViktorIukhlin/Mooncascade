@@ -7,30 +7,22 @@ const wss = new ws.Server(
     () => console.log(`Server started on 5000`)
 )
 
-const data = {
-    event: 'message/connection',
-    id: 001,
-    date: '05.06.2021',
-    username: 'Vanya',
-    message: 'Like'
-}
-
 wss.on('connection', function connection(ws) {
-    ws.on('message', function (message) {
-        message = JSON.parse(message)
-        switch (message.event) {
+    ws.on('message', function (data) {
+        data = JSON.parse(data)
+        switch (data.event) {
             case 'data':
-                broadcastMessage(message)
+                broadcastMessage(data)
                 break
             case 'connection':
-                broadcastMessage(message)
+                broadcastMessage(data)
                 break
         }
     })
 })
 
-function broadcastMessage(message, id) {
+function broadcastMessage(data, id) {
     wss.clients.forEach(client => {
-        client.send(JSON.stringify(message))
+        client.send(JSON.stringify(data))
     })
 }
