@@ -1,0 +1,35 @@
+.main-page {
+    width: 100%;
+    height: 100%;
+    &__header {
+        height: 56px;
+        background: #353d4b;
+    }
+    &__body {
+        height: calc(100vh - 56px);
+        display: flex;
+    }
+    &__side-bar {
+        width: 14%;
+        height: 100%;
+    }
+    &__box-table {
+        width: 86%;
+        height: 100%;
+        background-color: #f1f2f4;
+        padding: 32px;
+        overflow: auto;
+    }
+    &__top-box {
+        height: 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 36px;
+    }
+    &__page-name {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
