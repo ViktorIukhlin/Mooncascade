@@ -12,6 +12,7 @@ const MainPage = () => {
         socket.current.onopen = () => {
             setConnected(true)
         }
+
         socket.current.onmessage = event => {
             const athlete = JSON.parse(event.data)
 
@@ -26,7 +27,9 @@ const MainPage = () => {
                     })
 
                     return newArr.sort((a, b) => {
-                        return b.start_time + b.finish_time - (a.start_time + a.finish_time)
+                        a = a.finish_time ? a.finish_time + a.start_time + 100000 : a.start_time
+                        b = b.finish_time ? b.finish_time + b.start_time + 100000 : b.start_time
+                        return b - a
                     })
                 })
             } else {
@@ -34,7 +37,9 @@ const MainPage = () => {
                     let newArr = [{ identifier: athlete.identifier, start_time: athlete.time, finish_time: 0 }, ...state]
 
                     return newArr.sort((a, b) => {
-                        return b.start_time + b.finish_time - (a.start_time + a.finish_time)
+                        a = a.finish_time ? a.finish_time + a.start_time + 100000 : a.start_time
+                        b = b.finish_time ? b.finish_time + b.start_time + 100000 : b.start_time
+                        return b - a
                     })
                 })
             }
@@ -51,7 +56,19 @@ const MainPage = () => {
         connect()
     }, [])
 
-    console.log('data', data)
+    useEffect(() => {
+        const listener = () => {
+            if (document.visibilityState === 'visible') {
+                console.log('ПРИШЕЛ НА САЙТ')
+            } else {
+                console.log('УШЕЛ С САЙТА')
+            }
+        }
+
+        document.addEventListener('visibilitychange', listener)
+
+        return () => document.removeEventListener('visibilitychange', listener)
+    }, [])
 
     return (
         <>
