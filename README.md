@@ -57,7 +57,7 @@ finish corridor in the following way:
     sent). In that case, think / propose how it could be handled in the user interface so, that
     user would understand it adequately and won’t get confused.
 
-## The 4 steps to run an app
+## 4 steps to run an app
 
 ```sh
 Download ZIP
@@ -71,21 +71,19 @@ Mooncascade
 ├── README.md
 ├── node_modules
 ├── package.json
+├── .prettierrc
 ├── .gitignore
 ├── .gitattributes
 ├── client
-│   ├── node_modules
 │   ├── public
 │   ├── src
 │   ├── package-lock.json
 │   └── package.json
 ├── server
-│   ├── node_modules
 │   ├── package-lock.json
 │   ├── package.json
 │   └── websocket.js
 └── test-client
-    ├── node_modules
     ├── .env
     ├── public
     ├── src
@@ -97,23 +95,22 @@ Mooncascade
 1. At the beginning after 2 clients and server start, you need to go to the tab **Test Client** and configure the data that will be transmitted to the main client
 
 <p align='center'>
-    <img src='https://cdn.jsdelivr.net/gh/marionebl/create-react-app@9f6282671c54f0874afd37a72f6689727b562498/screencast-error.svg' width='600' alt='Build errors'>
+    <img src='https://drive.google.com/uc?export=view&id=1LvzfWePu1VpwqBvyUvx3nhQc3WQMdbSo' width='600' alt='Build errors'>
 </p>
 
-You can use the default settings by simply clicking on the button  **SEND DUMP DATA**.
+You can use the default settings by simply clicking on the button  **SEND DUMMY DATA**.
 
-2. Go to the tab **Client** and wait for data on athletes that will gradually appear.
+2. Go to the tab **Client** and wait for data on athletes to appear gradually.
 
 <p align='center'>
-    <img src='https://cdn.jsdelivr.net/gh/marionebl/create-react-app@9f6282671c54f0874afd37a72f6689727b562498/screencast-error.svg' width='600' alt='Build errors'>
+    <img src='https://drive.google.com/uc?export=view&id=1DDMfKS_3i_8tYz8VhG5XNTcE3ixs5lv3' width='100%' alt='Build errors'>
 </p>
 
 **Attention!**
 
-**When you leave the Main Client tab, data reception stops, but when you return to the tab, the data will start to be received again**
+**When you leave the Main Client tab, information reception stops, but when you return to the tab, the data will start to be received again**
 
 ## Credits
 
 Thanks a lot to the [Mooncascade](https://mooncascade.com/about) team for this test! 
 It was very interesting to do it!
-Thank you a lot! :)
