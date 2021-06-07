@@ -111,3 +111,9 @@ You can use the default settings by simply clicking on the button  **SEND DUMP D
 **Attention!**
 
 **When you leave the Main Client tab, data reception stops, but when you return to the tab, the data will start to be received again**
+
+## Credits
+
+Thanks a lot to the [Mooncascade](https://mooncascade.com/about) team for this test! 
+It was very interesting to do it!
+Thank you a lot! :)
