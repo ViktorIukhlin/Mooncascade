@@ -97,7 +97,7 @@ Mooncascade
 1. At the beginning after 2 clients and server start, you need to go to the tab **Test Client** and configure the data that will be transmitted to the main client
 
 <p align='center'>
-    <img src='https://drive.google.com/file/d/1V7s5dq7ZsZNfW5TCgKa3Ab9gj4E3ts0F/view?usp=sharing' width='600' alt='Build errors'>
+    <img src='https://drive.google.com/uc?export=view&id=1mwKldGMmkcSyd8NTemxHXhbvC1zSBxWp?hl=ru' width='600' alt='Build errors'>
 </p>
 
 You can use the default settings by simply clicking on the button  **SEND DUMP DATA**.
