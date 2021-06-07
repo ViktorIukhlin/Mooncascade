@@ -61,7 +61,7 @@ finish corridor in the following way:
 
 ```sh
 Download ZIP
-run the project in Code Editing
+open the project in Code Editing
 npm install
 npm start
 ```
