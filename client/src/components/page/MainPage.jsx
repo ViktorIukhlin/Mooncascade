@@ -79,9 +79,8 @@ const MainPage = () => {
         }
     }
 
-    const getNameOfAthlete = (identifier, Id) => {
+    const getNameOfAthlete = identifier => {
         const athlete = listOfAthletes.find(item => item.id === identifier)
-
         return identifier + ' ' + athlete.first_name + ' ' + athlete.surname
     }
 
@@ -92,13 +91,13 @@ const MainPage = () => {
     }
 
     useEffect(() => {
-        connect()
-    }, [])
+        if (document.visibilityState === 'visible') {
+            connect()
+        }
 
-    useEffect(() => {
         const listener = () => {
             if (document.visibilityState === 'visible') {
-                !connected && connect()
+                connect()
             } else {
                 socket.current.close()
             }
