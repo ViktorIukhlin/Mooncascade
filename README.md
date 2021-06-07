@@ -100,11 +100,11 @@ Mooncascade
 </p>
 
 You can use the default settings by simply clicking on the button  **SEND DUMP DATA**.
-
 2. Go to the tab **Client** and wait for data on athletes that will gradually appear.
 
 <p align='center'>
     <img src='https://cdn.jsdelivr.net/gh/marionebl/create-react-app@9f6282671c54f0874afd37a72f6689727b562498/screencast-error.svg' width='600' alt='Build errors'>
 </p>
 
-**Attention! When you leave the Main Client tab, data reception stops, but when you return to the tab, the data will start to be received again**
+**Attention!**
+**When you leave the Main Client tab, data reception stops, but when you return to the tab, the data will start to be received again**
