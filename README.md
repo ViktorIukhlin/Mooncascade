@@ -107,4 +107,5 @@ You can use the default settings by simply clicking on the button  **SEND DUMP D
 </p>
 
 **Attention!**
+
 **When you leave the Main Client tab, data reception stops, but when you return to the tab, the data will start to be received again**
