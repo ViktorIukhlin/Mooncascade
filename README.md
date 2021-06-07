@@ -103,7 +103,7 @@ You can use the default settings by simply clicking on the button  **SEND DUMMY 
 2. Go to the tab **Client** and wait for data on athletes to appear gradually.
 
 <p align='center'>
-    <img src='https://github.com/ViktorIukhlin/Mooncascade/blob/main/2.png' width='100%' alt='Build errors'>
+    <img src='https://github.com/ViktorIukhlin/Mooncascade/blob/main/2.jpg' width='100%' alt='Build errors'>
 </p>
 
 **Attention!**
