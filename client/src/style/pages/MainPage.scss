@@ -1,18 +1,130 @@
 .main-page {
     width: 100%;
     height: 100%;
+
     &__header {
         height: 56px;
         background: #353d4b;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 32px;
     }
+
+    &__header-text {
+        display: flex;
+    }
+
+    &__header-title {
+        color: #fff;
+    }
+
+    &__header-warning {
+        color: #ffc700;
+        margin-left: 60px;
+    }
+
+    &__header-actions {
+        display: flex;
+    }
+
+    &__header-clear {
+        width: 100px;
+        height: 26px;
+        background-color: #fff;
+        margin-right: 16px;
+        border-radius: 13px;
+        text-align: center;
+        cursor: pointer;
+        &:hover {
+            background-color: rgb(231, 230, 230);
+        }
+        &:active {
+            background-color: rgb(207, 207, 207);
+        }
+    }
+
+    &__header-status {
+        background-color: #f15e5e;
+        color: #fff;
+        width: 80px;
+        height: 26px;
+        text-align: center;
+        border-radius: 13px;
+        &.online {
+            background-color: #2dca46;
+        }
+    }
+
     &__body {
         height: calc(100vh - 56px);
         display: flex;
     }
+
     &__side-bar {
-        width: 14%;
+        width: 18%;
         height: 100%;
+        padding: 16px;
     }
+
+    &__message-box {
+        max-height: 100%;
+        min-width: 100%;
+        transition: 0.3s;
+        overflow: hidden;
+    }
+
+    &__message-card {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        border-radius: 6px;
+        border: 2px solid #ebecef;
+        margin-bottom: 8px;
+        transition: 0.3s;
+        word-wrap: break-word;
+        position: relative;
+        &.place_1 {
+            border-color: #ddad00;
+        }
+        &.place_2 {
+            border-color: #6f6f6f;
+        }
+        &.place_3 {
+            border-color: #993701;
+        }
+        &.animate {
+            animation: show 0.3s;
+        }
+        @keyframes show {
+            from {
+                margin: 0 120% 8px -120%;
+            }
+
+            to {
+                margin: 0 0 8px;
+            }
+        }
+    }
+
+    &__animate-text {
+        & span {
+            opacity: 0;
+            transform: translate(-150px, -50px) rotate(-180deg) scale(3);
+            animation: revolveScale 0.4s forwards;
+        }
+    }
+
+    &__time {
+        position: absolute;
+        top: 2px;
+        right: 6px;
+        color: rgb(189, 189, 189);
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
     &__box-table {
         width: 86%;
         height: 100%;
@@ -20,6 +132,7 @@
         padding: 32px;
         overflow: hidden;
     }
+
     &__top-box {
         height: 36px;
         display: flex;
@@ -27,6 +140,7 @@
         align-items: center;
         margin-bottom: 36px;
     }
+
     &__page-name {
         font-weight: 500;
         font-size: 20px;

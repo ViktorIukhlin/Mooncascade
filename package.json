@@ -4,13 +4,13 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "server-install": "cd server && npm i",
-        "client-install": "cd client && npm i",
-        "test_client-install": "cd test-client && npm i",
+        "server-install": "cd server && npm install",
+        "client-install": "cd client && npm install",
+        "test_client-install": "cd test-client && npm install",
         "server": "cd server && npm start",
         "client": "cd client && npm start",
         "test_client": "cd test-client && npm start",
-        "install": "concurrently \"npm run server-install\" \"npm run client-install\" \"npm run test_client-install\"",
+        "install": "concurrently \"npm install\" \"npm run server-install\" \"npm run client-install\" \"npm run test_client-install\"",
         "start": "concurrently \"npm run server\" \"npm run client\" \"npm run test_client\""
     },
     "repository": {

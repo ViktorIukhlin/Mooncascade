@@ -13,7 +13,7 @@ const Table = ({ data }) => {
     }
 
     const getSeconds = sec => {
-        return Math.round((sec / 1000) * 100) / 100
+        return Number(sec / 1000).toFixed(2)
     }
 
     return (
@@ -32,8 +32,8 @@ const Table = ({ data }) => {
                     <tr key={Id}>
                         <td>{athlete.identifier}</td>
                         {getNameOfAthlete(athlete.identifier)}
-                        <td>{athlete.start_time ? getSeconds(athlete.start_time) + ' sec.' : <span>&mdash;</span>}</td>
-                        <td>{athlete.finish_time ? getSeconds(athlete.finish_time) + ' sec.' : <span>&mdash;</span>}</td>
+                        <td>{athlete.start_time ? getSeconds(athlete.start_time) + ' s' : <span>&mdash;</span>}</td>
+                        <td>{athlete.finish_time ? getSeconds(athlete.finish_time) + ' s' : <span>&mdash;</span>}</td>
                     </tr>
                 ))}
             </tbody>
