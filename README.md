@@ -93,6 +93,7 @@ Mooncascade
     └── package.json
 ```
 ## How it works? 
+
 1. At the beginning after 2 clients and server start, you need to go to the tab **Test Client** and configure the data that will be transmitted to the main client
 
 <p align='center'>
@@ -100,6 +101,7 @@ Mooncascade
 </p>
 
 You can use the default settings by simply clicking on the button  **SEND DUMP DATA**.
+
 2. Go to the tab **Client** and wait for data on athletes that will gradually appear.
 
 <p align='center'>
