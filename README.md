@@ -65,3 +65,30 @@ run the project in Code Editing
 npm install
 npm start
 ```
+## App structure
+```
+Mooncascade
+├── README.md
+├── node_modules
+├── package.json
+├── .gitignore
+├── .gitattributes
+├── client
+│   ├── node_modules
+│   ├── public
+│   ├── src
+│   ├── package-lock.json
+│   └── package.json
+├── server
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   └── websocket.js
+└── test-client
+    ├── node_modules
+    ├── .env
+    ├── public
+    ├── src
+    ├── package-lock.json
+    └── package.json
+```
