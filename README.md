@@ -95,7 +95,7 @@ Mooncascade
 1. At the beginning after 2 clients and server start, you need to go to the tab **Test Client** and configure the data that will be transmitted to the main client
 
 <p align='center'>
-    <img src='https://drive.google.com/uc?export=view&id=1LvzfWePu1VpwqBvyUvx3nhQc3WQMdbSo' width='600' alt='Build errors'>
+    <img src='https://github.com/ViktorIukhlin/Mooncascade/blob/main/1.png' width='600' alt='Build errors'>
 </p>
 
 You can use the default settings by simply clicking on the button  **SEND DUMMY DATA**.
@@ -103,7 +103,7 @@ You can use the default settings by simply clicking on the button  **SEND DUMMY 
 2. Go to the tab **Client** and wait for data on athletes to appear gradually.
 
 <p align='center'>
-    <img src='https://github.com/ViktorIukhlin/Mooncascade/blob/main/1.png' width='100%' alt='Build errors'>
+    <img src='https://github.com/ViktorIukhlin/Mooncascade/blob/main/2.png' width='100%' alt='Build errors'>
 </p>
 
 **Attention!**
