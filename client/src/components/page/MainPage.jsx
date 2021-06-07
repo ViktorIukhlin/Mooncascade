@@ -116,7 +116,7 @@ const MainPage = () => {
                         <div className="main-page__header-title">Running competition</div>
                         <div className="main-page__header-warning">
                             {timeClose &&
-                                `WARNING! The connection was disconnected at ${timeClose} re-established at ${timeOpen}! Data loss possible!`}
+                                `WARNING! The communication was disconnected at ${timeClose} re-established at ${timeOpen}! Data loss possible!`}
                         </div>
                     </div>
                     <div className="main-page__header-actions">
