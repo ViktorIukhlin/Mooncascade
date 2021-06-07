@@ -4,13 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "server-install": "cd server && npm install",
-        "client-install": "cd client && npm install",
-        "test_client-install": "cd test-client && npm install",
         "server": "cd server && npm start",
         "client": "cd client && npm start",
         "test_client": "cd test-client && npm start",
-        "install": "concurrently \"npm install\" \"npm run server-install\" \"npm run client-install\" \"npm run test_client-install\"",
         "start": "concurrently \"npm run server\" \"npm run client\" \"npm run test_client\""
     },
     "repository": {
@@ -25,5 +21,15 @@
     "homepage": "https://github.com/ViktorIukhlin/Mooncascade#readme",
     "devDependencies": {
         "concurrently": "^6.2.0"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "node-sass": "^6.0.0",
+        "nodemon": "^2.0.7",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-scripts": "^4.0.3",
+        "web-vitals": "^2.0.1",
+        "ws": "^7.4.6"
     }
 }

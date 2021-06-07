@@ -2,6 +2,7 @@
     width: 100%;
     border-spacing: 0 4px;
     border-collapse: separate;
+
     &__header {
         border-bottom: 4px;
         width: 100vw;
@@ -27,6 +28,7 @@
             }
         }
     }
+
     &__body {
         & tr {
             height: 48px;
