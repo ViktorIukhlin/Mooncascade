@@ -98,7 +98,7 @@ const MainPage = () => {
     useEffect(() => {
         const listener = () => {
             if (document.visibilityState === 'visible') {
-                connect()
+                !connected && connect()
             } else {
                 socket.current.close()
             }
